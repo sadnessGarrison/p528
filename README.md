@@ -1,10 +1,6 @@
-# Recommendation ITU-R P.528-5 - U.S. Reference Implementation #
+# Recommendation ITU-R P.528-5 - U.S. Reference Implementation (Linux) #
 
-Persistent Identifier: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5081071.svg)](https://doi.org/10.5281/zenodo.5081071)
-
-This code repository contains the U.S. Reference Software Implementation of Recommendation ITU-R P.528. This Recommendation contains a method for predicting basic transmission loss in the frequency range 100-30 000 MHz for aeronautical services.  The software implements Annex 2 of Rec P.528, the Step-by-Step method to computing propagation loss for air-to-ground paths.
-
-Companion software ([p528-gui](https://github.com/NTIA/p528-gui)) provides a Graphical User Interface (GUI) that can be used with this software implementation. 
+This code repository contains a Linux-based fork of the U.S. Reference Software Implementation of Recommendation ITU-R P.528. This Recommendation contains a method for predicting basic transmission loss in the frequency range 100-30 000 MHz for aeronautical services.  The software implements Annex 2 of Rec P.528, the Step-by-Step method to computing propagation loss for air-to-ground paths.
 
 ## Inputs ##
 
@@ -56,17 +52,10 @@ The below table includes a select set of example inputs and outputs for testing 
 
 ### C++ Software
 
-The software is designed to be built into a DLL (or corresponding library for non-Windows systems).  The source code can be built for any OS that supports the standard C++ libraries.  A Visual Studio 2019 project file is provided for Windows users to support the build process and configuration.
-
-### C#/.NET Wrapper Software
-
-The .NET support of P.528 consists of a simple pass-through wrapper around the native DLL.  It is compiled to target .NET Framework 4.8.  Distribution and updates are provided through the published [NuGet package](https://github.com/NTIA/p528/packages).
+The software is designed to be built into a Linux system and has been tested with single point to point calculations on Ubuntu 24.04. The original compile environment was built for Windows operation systems. Software is compiled with the Makefile in the root of the repo and the "make" command. An executable (p528) and corresponding library (libp528.so) are built into the root repo directory.
 
 ## References ##
 
  * [Recommendation ITU-R P.528](https://www.itu.int/rec/R-REC-P.528/en)
  * [Rec ITU-R P.528 GUI](https://github.com/NTIA/p528-gui)
 
-## Contact ##
-
-For questions, contact Billy Kozma, wkozma@ntia.gov

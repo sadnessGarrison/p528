@@ -5,21 +5,20 @@ MATHLIB = -lm
 
 SRC = $(wildcard src/p528/*.cpp src/p676/*.cpp src/p835/*.cpp)
 OBJ = $(patsubst %.cpp,%.o,$(SRC))
-LIB = libp528.so
-DRIVER = P528Drvr_bin
+LIB = apps/libp528.so
+EXEC = apps/p528
 
 .PHONY: all clean
 
-all: $(LIB) $(DRIVER)
-
+all: $(LIB) $(EXEC)
 $(LIB): $(OBJ)
 	$(CXX) $(LDFLAGS) -o $@ $(OBJ) $(MATHLIB)
 
-$(DRIVER): apps/P528Linux.cpp
+$(EXEC): apps/src/P528Linux.cpp
 	$(CXX) $(CXXFLAGS) $< -o $@ -ldl
 
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJ) $(LIB) $(DRIVER)
+	rm -f $(OBJ) $(LIB) $(EXEC)
