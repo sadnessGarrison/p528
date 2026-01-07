@@ -15,7 +15,7 @@ all: $(LIB) $(DRIVER)
 $(LIB): $(OBJ)
 	$(CXX) $(LDFLAGS) -o $@ $(OBJ) $(MATHLIB)
 
-$(DRIVER): P528Drvr/P528Linux.cpp
+$(DRIVER): apps/P528Linux.cpp
 	$(CXX) $(CXXFLAGS) $< -o $@ -ldl
 
 %.o: %.cpp

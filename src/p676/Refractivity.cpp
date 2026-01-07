@@ -1,5 +1,6 @@
 #include "../../include/p676.h"
 
+#include <cmath>
 /*=============================================================================
  |
  |  Description:  Imaginary part of the frequency-dependent complex

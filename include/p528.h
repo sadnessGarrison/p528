@@ -1,9 +1,9 @@
 #include <vector>
 #include <algorithm>
 
-using namespace std;
+// using namespace std;
 
-#define DLLEXPORT extern "C" __declspec(dllexport)
+// #define DLLEXPORT extern "C" __declspec(dllexport)
 #define MAX(x, y) (((x) > (y)) ? (x) : (y))
 #define MIN(x, y) (((x) < (y)) ? (x) : (y))
 
@@ -68,10 +68,10 @@ using namespace std;
 class data
 {
 public:
-    const static vector<double> P;          // Percentages for interpolation and data tables
+    const static std::vector<double> P;          // Percentages for interpolation and data tables
 
-    const static vector<vector<double>> NakagamiRiceCurves;
-    const static vector<int> K;
+    const static std::vector<std::vector<double>> NakagamiRiceCurves;
+    const static std::vector<int> K;
 };
 
 //
@@ -188,10 +188,10 @@ int ValidateInputs(double d__km, double h_1__meter, double h_2__meter, double f_
 
 
 // Public Functions
-DLLEXPORT int P528(double d__km, double h_1__meter, double h_2__meter, double f__mhz, 
+int P528(double d__km, double h_1__meter, double h_2__meter, double f__mhz,
     int T_pol, double p, Result *result);
-DLLEXPORT int P528_Ex(double d__km, double h_1__meter, double h_2__meter, double f__mhz,
+int P528_Ex(double d__km, double h_1__meter, double h_2__meter, double f__mhz,
     int T_pol, double p, Result* result, Terminal* terminal_1, Terminal* terminal_2,
     TroposcatterParams* tropo, Path* path, LineOfSightParams* los_params);
-DLLEXPORT double FindKForYpiAt99Percent(double Y_pi_99__db);
-DLLEXPORT double NakagamiRice(double K, double q);
+double FindKForYpiAt99Percent(double Y_pi_99__db);
+double NakagamiRice(double K, double p);

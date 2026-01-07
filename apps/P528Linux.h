@@ -1,5 +1,4 @@
-
-typedef int(__stdcall *p528func)(double d__km, double h_1__meter, double h_2__meter, 
+typedef int(*p528func)(double d__km, double h_1__meter, double h_2__meter, 
     double f__mhz, int T_pol, double p, struct Result* result);
 
 //

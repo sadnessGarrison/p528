@@ -1,4 +1,7 @@
 #include "../../include/p528.h"
+#include <vector>
+
+using std::vector;
 
 // Data curves corresponding Nakagami-Rice distributions
 const vector<vector<double>> data::NakagamiRiceCurves =

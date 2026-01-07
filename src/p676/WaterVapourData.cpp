@@ -1,4 +1,7 @@
 #include "../../include/p676.h"
+#include <vector>
+
+using std::vector;
 
 // Spectroscopic data for water vapor attenuation (Table 2)
 

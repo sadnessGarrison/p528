@@ -1,5 +1,8 @@
 #include <math.h>
+#include <vector>
 #include "../../include/p528.h"
+
+using std::vector;
 
 /*=============================================================================
  |
