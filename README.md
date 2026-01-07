@@ -52,7 +52,7 @@ The below table includes a select set of example inputs and outputs for testing 
 
 ### C++ Software
 
-The software is designed to be built into a Linux system and has been tested with single point to point calculations on Ubuntu 24.04. The original compile environment was built for Windows operation systems. Software is compiled with the Makefile in the root of the repo and the "make" command. An executable (p528) and corresponding library (libp528.so) are built into the root repo directory.
+The software is designed to be built into a Linux system and has been tested with single point to point calculations on Ubuntu 24.04. The original compile environment was built for Windows operation systems. Software is compiled with the Makefile in the root of the repo and the "make" command. An executable (p528) and corresponding library (libp528.so) are built into the apps directory.
 
 ## References ##
 
