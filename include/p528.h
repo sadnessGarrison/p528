@@ -188,8 +188,17 @@ int ValidateInputs(double d__km, double h_1__meter, double h_2__meter, double f_
 
 
 // Public Functions
+#ifdef __cplusplus
+extern "C" {
+#endif
 int P528(double d__km, double h_1__meter, double h_2__meter, double f__mhz,
     int T_pol, double p, Result *result);
+#ifdef __cplusplus
+}
+#endif
+int P528_Ex(double d__km, double h_1__meter, double h_2__meter, double f__mhz,
+    int T_pol, double p, Result* result, Terminal* terminal_1, Terminal* terminal_2,
+    TroposcatterParams* tropo, Path* path, LineOfSightParams* los_params);
 int P528_Ex(double d__km, double h_1__meter, double h_2__meter, double f__mhz,
     int T_pol, double p, Result* result, Terminal* terminal_1, Terminal* terminal_2,
     TroposcatterParams* tropo, Path* path, LineOfSightParams* los_params);

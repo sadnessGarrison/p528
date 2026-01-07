@@ -41,3 +41,5 @@ Thumbs.db
 **/obj
 **/x64
 **/x86
+apps/libp528.so
+apps/p528

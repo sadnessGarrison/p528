@@ -21,6 +21,7 @@
  |      Returns:  rtn               - SUCCESS or error code
  |
  *===========================================================================*/
+extern "C" __attribute__((visibility("default")))
 int P528(double d__km, double h_1__meter, double h_2__meter, double f__mhz,
     int T_pol, double p, Result* result)
 {
