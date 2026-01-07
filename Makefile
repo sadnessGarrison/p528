@@ -3,8 +3,9 @@ CXXFLAGS = -std=c++11 -O2 -fPIC -Iinclude
 LDFLAGS = -shared -Wl,-soname,libp528.so
 MATHLIB = -lm
 
+OBJDIR = build/obj
 SRC = $(wildcard src/p528/*.cpp src/p676/*.cpp src/p835/*.cpp)
-OBJ = $(patsubst %.cpp,%.o,$(SRC))
+OBJ = $(patsubst src/%.cpp,$(OBJDIR)/%.o,$(SRC))
 LIB = apps/libp528.so
 EXEC = apps/p528
 
@@ -17,8 +18,9 @@ $(LIB): $(OBJ)
 $(EXEC): apps/src/P528Linux.cpp
 	$(CXX) $(CXXFLAGS) $< -o $@ -ldl
 
-%.o: %.cpp
+$(OBJDIR)/%.o: src/%.cpp
+	@mkdir -p $(dir $@)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJ) $(LIB) $(EXEC)
+	rm -rf $(OBJDIR) $(LIB) $(EXEC)

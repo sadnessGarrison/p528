@@ -604,7 +604,7 @@ bool Match(const char* opt, char* arg) {
  *===========================================================================*/
 void Help() {
     printf("\n");
-    printf("Usage: P528Drvr_x86.exe [Options]\n");
+    printf("Usage: p528 [Options]\n");
     printf("Options (not case sensitive)\n");
     printf("\t-h    :: Displays help\n");
     printf("\t-v    :: Displays version information\n");
@@ -618,8 +618,8 @@ void Help() {
     printf("\t-mode :: Mode of operation [POINT, CURVE, TABLE]\n");
     printf("\n");
     printf("Examples:\n");
-    printf("\tP528Drvr_x86.exe -mode POINT -h1 10 -h2 20000 -f 3000 -p 50 -tpol 1 -d 600\n");
-    printf("\tP528Drvr_x86.exe -mode CURVE -h1 15 -h2 15000 -f 450 -p 10 -tpol 0 -o curve.csv\n");
-    printf("\tP528Drvr_x86.exe -mode TABLE -f 6500 -p 90 -tpol 1 -o table.csv\n");
+    printf("\tp528 -mode POINT -h1 10 -h2 20000 -f 3000 -p 50 -tpol 1 -d 600\n");
+    printf("\tp528 -mode CURVE -h1 15 -h2 15000 -f 450 -p 10 -tpol 0 -o curve.csv\n");
+    printf("\tp528 -mode TABLE -f 6500 -p 90 -tpol 1 -o table.csv\n");
     printf("\n");
 };
